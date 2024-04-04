@@ -24,10 +24,10 @@ luser = non-root
 1. As luser, add slackbuilds key to https://slackbuilds.org/faq/#gpg.
 2. Add these scripts on /usr/local/bin or **better** read it and write something similar yourself
 
-|              |   |   |   |   |
-|---|--------------|---|---|---|---|
-| 1 | Run as luser  | Download from slackbuilds FTP, check via gpg, unpack it and download the related software third-party as in DOWNLOAD... variables of slackbuild .info file.  |   |   |   |
-| 2 | Run as root  | Create .tgz package for installpkg.  |   |   |   |
+| #  | Run as          | |
+|---|--------------|---|
+| 1 | luser  | Download from slackbuilds FTP, check via gpg, unpack it and download the related software third-party as in DOWNLOAD... variables of slackbuild .info file.  |
+| 2 | root  | Create .tgz package for installpkg.  |
 
 Then:
 
