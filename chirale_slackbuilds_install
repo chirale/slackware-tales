@@ -1,0 +1,17 @@
+#!/bin/bash
+# USAGE: command multimedia spotify
+# NOTE: wget GPG-KEY from slackbuilds.org then gpg --import to pass "Successfully checked"
+# /usr/local/src has g+rw and root:user
+set -e
+SLACKWARE_VERSION=`cat /etc/slackware-version | cut -d " " -f 2`
+PACK=$1
+OUTPUT=/usr/local/etc
+export OUTPUT
+cd /usr/local/src/$PACK
+source $PACK.info
+wget -c $DOWNLOAD_x86_64
+# build
+./$PACK.SlackBuild
+cd $OUTPUT
+echo "Run installpkg ..."
+ls -lah $PACK*.tgz
