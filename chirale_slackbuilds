@@ -1,0 +1,21 @@
+#!/bin/bash
+# USAGE: command multimedia spotify
+# NOTE: wget GPG-KEY from slackbuilds.org then gpg --import to pass "Successfully checked"
+# /usr/local/src has g+rw and root:user
+set -e
+SLACKWARE_VERSION=`cat /etc/slackware-version | cut -d " " -f 2`
+SECTION=$1
+PACK=$2
+cd /usr/local/src
+# get via FTP
+wget -c ftp://ftp.slackbuilds.org/pub/slackbuilds/$SLACKWARE_VERSION/$SECTION/$PACK.tar.gz
+# verify via sign on HTTPS
+wget -c https://slackbuilds.org/slackbuilds/$SLACKWARE_VERSION/$SECTION/$PACK.tar.gz.asc
+gpg --verify $PACK.tar.gz.asc $PACK.tar.gz
+echo "Successfully checked"
+tar xvvf $PACK.tar.gz
+echo "Successfully extracted"
+chmod +x $PACK/$PACK.SlackBuild
+echo "Execution granted to $(pwd)/$PACK/$PACK.Slackbuild"
+# tree $(pwd)
+echo "Download and unpack successful: run chirale_slackbuilds_install $PACK or follow https://slackbuilds.org/howto/"
