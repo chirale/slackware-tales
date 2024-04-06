@@ -26,8 +26,8 @@ luser = non-root
 
 | #  | Command | Run as          | |
 |---|---|--------------|---|
-| 1 | chirale_slackbuilds | luser  | Download from slackbuilds FTP, check via gpg, unpack it and download the related software third-party as in DOWNLOAD... variables of slackbuild .info file.  |
-| 2 | chirale_slackbuilds_install | root  | Create .tgz package for installpkg.  |
+| 1 | [chirale_slackbuilds](./chirale_slackbuilds) | luser  | Download from slackbuilds FTP, check via gpg, unpack it and download the related software third-party as in DOWNLOAD... variables of slackbuild .info file.  |
+| 2 | [chirale_slackbuilds_install](./chirale_slackbuilds_install) | root  | Create .tgz package for installpkg.  |
 
 Then:
 
