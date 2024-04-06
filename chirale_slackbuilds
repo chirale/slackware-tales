@@ -17,5 +17,9 @@ tar xvvf $PACK.tar.gz
 echo "Successfully extracted"
 chmod +x $PACK/$PACK.SlackBuild
 echo "Execution granted to $(pwd)/$PACK/$PACK.Slackbuild"
-# tree $(pwd)
-echo "Download and unpack successful: run chirale_slackbuilds_install $PACK or follow https://slackbuilds.org/howto/"
+# 
+cd /usr/local/src/$PACK
+source $PACK.info
+wget -c $DOWNLOAD_x86_64
+echo "Slackbuild and 3rd party package downloaded and installed successfully. Run:"
+echo "chirale_slackbuilds_install $PACK or follow https://slackbuilds.org/howto/"
