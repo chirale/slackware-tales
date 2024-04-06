@@ -10,5 +10,7 @@ cd /usr/local/src/$PACK
 # build
 ./$PACK.SlackBuild
 cd $OUTPUT
-FILENAME=`ls $PACK*.tgz | head -1`
-echo "Run installpkg $FILENAME"
+FILENAME=`ls -t1 $PACK*.tgz | head -1`
+echo "Run:"
+echo "    cd /usr/local/src/$PACK && installpkg $FILENAME"
+echo "to install the software"
