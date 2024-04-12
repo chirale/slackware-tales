@@ -12,5 +12,5 @@ cd /usr/local/src/$PACK
 cd $OUTPUT
 FILENAME=`ls -t1 $PACK*.tgz | head -1`
 echo "Run:"
-echo "    cd /usr/local/src/$PACK && installpkg $FILENAME"
+echo "    installpkg /usr/local/etc/$FILENAME"
 echo "to install the software"
