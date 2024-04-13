@@ -20,6 +20,6 @@ echo "Execution granted to $(pwd)/$PACK/$PACK.Slackbuild"
 # 
 cd /usr/local/src/$PACK
 source $PACK.info
-wget -c $DOWNLOAD_x86_64
+wget -c $(( DOWNLOAD_x86_64 ? DOWNLOAD_x86_64 : DOWNLOAD ))
 echo "Slackbuild and 3rd party package downloaded and installed successfully. Run:"
 echo "chirale_slackbuilds_install $PACK or follow https://slackbuilds.org/howto/"
