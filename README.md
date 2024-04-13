@@ -38,3 +38,8 @@ Then:
 5. As root, run command (2) using command jg-picodrive.
 6. Go to /usr/local/etc then run installpkg LONGNAMEHERE.tgz
 7. You can uninstall with removepkg jg-picodrive
+
+## 3. devices
+
+- Before decrypting, some drivers may not work so use the laptop keyboard instead of USB one in case it doesn't work
+- If you're using MFA devices, no fancy software is needed for basic usage but all you need is [here](https://www.linuxquestions.org/questions/slackware-14/how-do-i-setup-slackware-to-take-yubikeys-4175702396/#post6294274) (e.g. via chirale_slackbuilds libraries libfido2) then reboot
