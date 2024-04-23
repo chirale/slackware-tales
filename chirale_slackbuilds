@@ -19,7 +19,7 @@ chmod +x $PACK/$PACK.SlackBuild
 echo "Execution granted to $(pwd)/$PACK/$PACK.Slackbuild"
 cd /usr/local/src/$PACK
 source $PACK.info
-if [[ $DOWNLOAD_x86_64 && ${#DOWNLOAD_x64_64} > 0 ]]
+if [[ $DOWNLOAD_x86_64 && ${#DOWNLOAD_x86_64} > 0 ]]
 then
 	DOWNLOAD=$DOWNLOAD_x86_64
 fi
